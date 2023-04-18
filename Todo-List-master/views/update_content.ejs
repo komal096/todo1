@@ -1,0 +1,52 @@
+<link rel="stylesheet" href="/css/Update.css">
+<div class="todo_app">
+    <div class="todo">
+        <form action="/create_todo" method="POST" class="todo-header">
+            <input type="textarea" name="content" required>
+            <button type="submit"><span class="fas fa-plus"></span></button>
+        
+        <div class="select_and_input">
+            <select name="category" required>
+                <option value="" disabled selected>Select your option</option>
+                <option>Personal</option>
+                <option>Work</option>
+                <option>School</option>
+                <option>Cleaning</option>
+                <option>Others</option>
+            </select>
+            <input class="datesValues" type="date" name="dueDate" placeholder="Due data dd/mm/yyyy" required>
+        </div>
+    </form>
+    <ul class="todo-list">
+        <% for (let i of todoLists) { %>
+            <% if (i._id == idTask) { %>
+            <li class="todo-list-item">
+                <div class="todo-list-item-name">
+                    <div class="content_text"><%= i.content %></div>
+                    <div class="dueDate_calendar"><i class="fa-solid fa-calendar-days"></i>&nbsp; <%= i.dueDate %></div>
+                    <div class="category_form"><%= i.category %></div>
+                </div>
+                <form action="/update_content/<%= i._id %>" method="POST">
+                    <input type="text" value="<%= i.content %>" name="content" class="updateContent">
+                    <button type="submit" class="confirm">Confirm</button>
+                    <a href="/" class="cancel">Cancel</a>
+                </form>
+                <p>Note:Press Cancel after updating</p>
+            </li><% } else { %>
+                <li class="todo-list-item">
+                    <div class="todo-list-item-name">
+                        <div class="content_text"><%= i.content %></div>
+                        <div class="dueDate_calendar"><i class="fa-solid fa-calendar-days"></i>&nbsp; <%= i.dueDate %></div>
+                        <div class="category_form"><%= i.category %></div>
+                    </div>
+                    <a href="/update_content/<%= i._id %>" class="edit">
+                        <span class="fas fa-edit"></span>
+                    </a>
+                    <a href="/delete_content?content=<%= i._id %>" class="remove">
+                        <span class="fas fa-times"></span>
+                    </a>
+                </li>
+        <% } %><% } %>
+    </ul>
+    </div>
+</div>

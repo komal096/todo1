@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: lightblue;
+    text-align: center;
+}
+
+.todo_app{
+    background-color: white;
+    width:75%;
+    margin: auto;
+    border-radius: 15px;
+    margin-top: 5px;
+}
+
+.todo {
+    margin-top: 20px;
+    display: inline-block;
+    position: relative;
+    width: 90%;
+    background-color: lightgray;
+    border-radius: 15px;
+    top: 25%;
+    padding: 10px;
+}
+
+.todo-header input {
+    width: 75%;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    font-family: sans-serif;
+    text-align: center;
+    border-bottom: 2px solid yellow;
+}
+
+.todo-header input:focus{
+    outline: none;
+}
+
+.todo-header button {
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 5px;
+    font-family: sans-serif;
+    background-color: rgb(51, 212, 100);
+}
+
+/* style for select and options input input area */
+
+.select_and_input{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.select_and_input select{
+    height: 30px;
+    width: 25%;
+    transition: transform 0.3s;
+    text-align: center;
+    margin-right: 50px;
+}
+.select_and_input input{
+    height: 30px;
+    width: 25%;
+    text-align: center;
+    transition: transform 0.3s;
+}   
+
+/* design for select and option END */
+
+/* design for dates value */
+.datesValues{
+    transition: transform 0.3s;
+}
+
+
+.todo-list-item {
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    font-family: sans-serif;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: row;
+}
+
+ul.todo-list {
+    width: 85%;
+    display: inline-block;
+}
+
+.todo-list-item form {
+    width: 80%;
+    display: flex;
+}
+
+.todo-list-item button {
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px;
+    font-family: 'Candal', sans-serif;
+    background-color: rgb(51, 212, 100);
+}
+
+
+.todo-list-item .cancel {
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px;
+    font-family: 'Candal', sans-serif;
+    background-color: rgb(223, 43, 43);
+    margin-left: 5px;
+}
+
+.todo-list-item-name{
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.content_text{
+    width: 100%;
+    font-family: cursive;
+    font-size: 20px;
+    background-color: antiquewhite;
+}
+
+.dueDate_calendar{
+    width: 50%;
+    position: relative;
+    font-size: 10px;
+    top: 10px;
+    vertical-align: bottom;
+    color: darkred
+}
+
+.category_form{
+    width: 50%;
+    position: relative;
+    top:5px;
+}
+
+.todo-list-item .edit {
+    color : rgb(143, 233, 58);
+    margin-right: 10px;
+    cursor:pointer;
+    text-decoration: none;
+}
+
+.todo-list-item .remove {
+    color : rgb(243, 96, 96);
+    margin-right: 5px;
+    cursor:pointer;
+    text-decoration: none;
+}       
